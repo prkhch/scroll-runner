@@ -3,8 +3,6 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [Header("설정")]
-    [Tooltip("점프력")]
-    public float jumpForce;
 
     [Header("레퍼런스")]
     public Rigidbody2D playerRigidbody;
@@ -20,32 +18,26 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) && isGrounded) {
-            playerRigidbody.AddForceY(jumpForce, ForceMode2D.Impulse);
-            isGrounded = false;
-            playerAnimator.SetInteger("state", 1);
+
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Stage"))
+        {
+             playerAnimator.SetBool("isGrounded", true); // 착지 후 달리기 애니메이션
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision) {
-        if(collision.gameObject.name == "Platform") {
-
-            // 처음 시작할 때는 랜딩 애니메이션 안함
-            if(!isGrounded)playerAnimator.SetInteger("state", 2);
-
-            isGrounded = true;
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Stage"))
+        {
+             playerAnimator.SetBool("isGrounded", false); // 떨어질 때 달리기 애니메이션
         }
     }
 
     void OnTriggerEnter2D(Collider2D collider) {
-        if(collider.gameObject.tag == "Enemy") {
 
-        }
-        else if(collider.gameObject.tag == "Food") {
-
-        }
-        else if(collider.gameObject.tag == "Golden") {
-
-        }
     }
 }
