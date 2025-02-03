@@ -3,12 +3,12 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [Header("설정")]
+    public float moveSpeed;
 
     [Header("레퍼런스")]
     public Rigidbody2D playerRigidbody;
     public Animator playerAnimator;
 
-    private bool isGrounded = true;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,7 +18,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        transform.position += Vector3.right * moveSpeed * Time.deltaTime;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
