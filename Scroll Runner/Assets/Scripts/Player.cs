@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!playerAnimator.GetBool("isDead"))
         transform.position += Vector3.right * moveSpeed * Time.deltaTime;
     }
 
@@ -37,7 +38,10 @@ public class Player : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D collider) {
-
+    void OnDeathAnimationEnd()
+    {
+        playerAnimator.SetBool("isDead", false);
+        transform.position = new Vector2(0,0);
     }
+
 }
