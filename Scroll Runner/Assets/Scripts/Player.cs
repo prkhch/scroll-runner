@@ -41,6 +41,7 @@ public class Player : MonoBehaviour
     void OnDeathAnimationEnd()
     {
         playerAnimator.SetBool("isDead", false);
+        playerAnimator.Update(0);
         transform.position = new Vector2(0,0);
     }
 
