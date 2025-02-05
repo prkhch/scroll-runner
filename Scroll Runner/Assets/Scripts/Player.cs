@@ -1,4 +1,6 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -9,6 +11,8 @@ public class Player : MonoBehaviour
     public Rigidbody2D playerRigidbody;
     public Animator playerAnimator;
     public Vector2 spawnPoint;
+
+    public TMP_Text speedTestUI;
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -22,6 +26,7 @@ public class Player : MonoBehaviour
     {
         if(!playerAnimator.GetBool("isDead"))
         transform.position += Vector3.right * moveSpeed * Time.deltaTime;
+        speedTestUI.text = moveSpeed + "";
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -45,6 +50,7 @@ public class Player : MonoBehaviour
         playerAnimator.SetBool("isDead", false);
         // playerAnimator.Update(0);
         transform.position = spawnPoint;
+        moveSpeed = 0;
     }
 
 }
