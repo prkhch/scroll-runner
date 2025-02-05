@@ -4,7 +4,6 @@ using UnityEngine;
 public class DeadZoneTrigger : MonoBehaviour
 {
     [Header("레퍼런스")]
-    public Transform spawnPoint;
     public Animator playerAnimator;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

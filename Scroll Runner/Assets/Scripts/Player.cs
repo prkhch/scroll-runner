@@ -8,11 +8,13 @@ public class Player : MonoBehaviour
     [Header("레퍼런스")]
     public Rigidbody2D playerRigidbody;
     public Animator playerAnimator;
+    public Vector2 spawnPoint;
+    
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        transform.position = spawnPoint;
     }
 
     // Update is called once per frame
@@ -41,8 +43,8 @@ public class Player : MonoBehaviour
     void OnDeathAnimationEnd()
     {
         playerAnimator.SetBool("isDead", false);
-        playerAnimator.Update(0);
-        transform.position = new Vector2(0,0);
+        // playerAnimator.Update(0);
+        transform.position = spawnPoint;
     }
 
 }
