@@ -5567,6 +5567,7 @@ MonoBehaviour:
   playerRigidbody: {fileID: 1910857174}
   playerAnimator: {fileID: 1910857171}
   spawnPoint: {x: 0, y: 0}
+  speedTestUI: {fileID: 389639027}
 --- !u!1 &2034565301
 GameObject:
   m_ObjectHideFlags: 0
