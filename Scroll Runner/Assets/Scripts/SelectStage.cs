@@ -6,12 +6,15 @@ public class SelectStage : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [Header("래퍼런스")]
-    public Button stageSelectButton;
+    public Button selectStageButton;
+    public GameObject selectStagePanelUI;
+    public GameObject startPanelUI;
     void Start()
     {
-        if (stageSelectButton != null)
+        if (selectStageButton != null)
         {
-            stageSelectButton.onClick.AddListener(LoadStageScene);
+            // stageSelectButton.onClick.AddListener(LoadStageScene);
+            selectStageButton.onClick.AddListener(ActiveSelectStagePanel);
         }
     }
 
@@ -23,6 +26,12 @@ public class SelectStage : MonoBehaviour
 
     void LoadStageScene()
     {
-        SceneManager.LoadScene("StageScene"); // "StageScene"으로 이동
+        // SceneManager.LoadScene("StageScene"); // "StageScene"으로 이동
+        
+    }
+    
+    void ActiveSelectStagePanel() {
+        selectStagePanelUI.SetActive(true);
+        startPanelUI.SetActive(false);
     }
 }
