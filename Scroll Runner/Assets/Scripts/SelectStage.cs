@@ -5,16 +5,23 @@ using UnityEngine.UI;
 public class SelectStage : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    [Header("래퍼런스")]
-    public Button selectStageButton;
-    public GameObject selectStagePanelUI;
+    [Header("시작")]
     public GameObject startPanelUI;
+    public Button runButton;
+    [Header("스테이지선택")]
+    public GameObject selectStagePanelUI;
+    public Button closeButton;
+    public Button selectStageButton;
+    private int selectedStage;
     void Start()
     {
-        if (selectStageButton != null)
+        if (runButton != null)
         {
-            // stageSelectButton.onClick.AddListener(LoadStageScene);
-            selectStageButton.onClick.AddListener(ActiveSelectStagePanel);
+            runButton.onClick.AddListener(ToggleSelectStagePanel);
+        }
+        if (closeButton != null)
+        {
+            closeButton.onClick.AddListener(ToggleSelectStagePanel);
         }
     }
 
@@ -30,8 +37,8 @@ public class SelectStage : MonoBehaviour
         
     }
     
-    void ActiveSelectStagePanel() {
-        selectStagePanelUI.SetActive(true);
-        startPanelUI.SetActive(false);
+    void ToggleSelectStagePanel() {
+        startPanelUI.SetActive(!startPanelUI.activeSelf);
+        selectStagePanelUI.SetActive(!selectStagePanelUI.activeSelf);
     }
 }
