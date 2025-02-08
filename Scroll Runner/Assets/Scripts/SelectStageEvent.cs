@@ -1,8 +1,7 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class SelectStage : MonoBehaviour
+public class SelectStageEvent : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     [Header("시작")]
@@ -11,8 +10,7 @@ public class SelectStage : MonoBehaviour
     [Header("스테이지선택")]
     public GameObject selectStagePanelUI;
     public Button closeButton;
-    public Button selectStageButton;
-    private int selectedStage;
+    public Button[] stageButtonArray;
     void Start()
     {
         if (runButton != null)
@@ -23,6 +21,14 @@ public class SelectStage : MonoBehaviour
         {
             closeButton.onClick.AddListener(ToggleSelectStagePanel);
         }
+        if (stageButtonArray != null)
+        {
+            for (int i = 1; i < stageButtonArray.Length; i++)
+            {
+                int stageNumber = i;
+                stageButtonArray[i].onClick.AddListener(() => GameManager.Instance.LoadStageScene(stageNumber));
+            }
+        }
     }
 
     // Update is called once per frame
@@ -31,11 +37,7 @@ public class SelectStage : MonoBehaviour
         
     }
 
-    void LoadStageScene()
-    {
-        // SceneManager.LoadScene("StageScene"); // "StageScene"으로 이동
-        
-    }
+    
     
     void ToggleSelectStagePanel() {
         startPanelUI.SetActive(!startPanelUI.activeSelf);
