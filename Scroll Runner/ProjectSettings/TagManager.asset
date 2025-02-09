@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Stage
   - DeadZone
+  - NextPoint
   layers:
   - Default
   - TransparentFX

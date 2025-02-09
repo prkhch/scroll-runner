@@ -38,10 +38,6 @@ public class ScrollbarController : MonoBehaviour
             playerScript.moveSpeed = Mathf.Max(playerScript.moveSpeed - value, -0.5f);
         }
 
-        Debug.Log("preValue : " + preValue);
-        Debug.Log("value : " + value);
-        Debug.Log("playerScript.moveSpeed : " + playerScript.moveSpeed);
-
         preValue = value;
 
     }
@@ -55,7 +51,6 @@ public class ScrollbarController : MonoBehaviour
             } else {
                 playerScript.moveSpeed = 1;
             }
-            Debug.Log("CantStopPlayer : " + playerScript.moveSpeed);
         }
     }
     

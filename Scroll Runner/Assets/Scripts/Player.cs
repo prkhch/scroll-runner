@@ -24,16 +24,19 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!playerAnimator.GetBool("isDead"))
-        transform.position += Vector3.right * moveSpeed * Time.deltaTime;
+        if(!playerAnimator.GetBool("isDead")) // 죽으면 멈춤
+        {
+            transform.position += Vector3.right * moveSpeed * Time.deltaTime;
+        }
+
         speedTestUI.text = moveSpeed + "";
     }
 
     void OnCollisionEnter2D(Collision2D collision)
-    {
+    { 
         if (collision.gameObject.CompareTag("Stage"))
         {
-             playerAnimator.SetBool("isGrounded", true); // 착지 후 달리기 애니메이션
+            playerAnimator.SetBool("isGrounded", true); // 착지 후 달리기 애니메이션
         }
     }
 
@@ -45,10 +48,18 @@ public class Player : MonoBehaviour
         }
     }
 
+    void OnTriggerEnter2D(Collider2D collision) {
+        if (collision.gameObject.CompareTag("NextPoint"))
+        {
+            Debug.Log("NextPoint");
+            StageManager.Instance.ActivateStage(++StageManager.Instance.selectedStage);
+            transform.position = spawnPoint;
+        }
+    }
+
     void OnDeathAnimationEnd()
     {
         playerAnimator.SetBool("isDead", false);
-        // playerAnimator.Update(0);
         transform.position = spawnPoint;
         moveSpeed = 0;
     }

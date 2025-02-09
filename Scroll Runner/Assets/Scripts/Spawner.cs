@@ -11,5 +11,10 @@ public class Spawner : MonoBehaviour
         playerScript.spawnPoint = transform.position;
     }
 
+    void OnEnable()
+    {
+        playerScript.spawnPoint = transform.position;
+    }
+
 
 }

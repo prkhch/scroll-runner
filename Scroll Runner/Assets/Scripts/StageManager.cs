@@ -4,6 +4,7 @@ public class StageManager : MonoBehaviour
 {
     public static StageManager Instance { get; private set; }
     public GameObject[] stageArray;
+    public int selectedStage;
     
     private void Awake()
     {
@@ -21,7 +22,8 @@ public class StageManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        ActivateStage(GameManager.Instance.selectedStage);
+        selectedStage = GameManager.Instance.selectedStage;
+        ActivateStage(selectedStage);
     }
 
     // Update is called once per frame
