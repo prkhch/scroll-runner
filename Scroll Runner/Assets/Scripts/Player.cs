@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!playerAnimator.GetBool("isDead")) // 죽으면 멈춤
+        if(!playerAnimator.GetBool("isDead")) // 죽으면 이동멈춤
         {
             transform.position += Vector3.right * moveSpeed * Time.deltaTime;
         }
@@ -54,6 +54,7 @@ public class Player : MonoBehaviour
             Debug.Log("NextPoint");
             StageManager.Instance.ActivateStage(++StageManager.Instance.selectedStage);
             transform.position = spawnPoint;
+            moveSpeed = 0;
         }
     }
 
