@@ -6,6 +6,7 @@ public class Player : MonoBehaviour
 {
     [Header("설정")]
     public float moveSpeed;
+    public float jumpForce;
 
     [Header("레퍼런스")]
     public Rigidbody2D playerRigidbody;
@@ -26,7 +27,7 @@ public class Player : MonoBehaviour
     {
         if(!playerAnimator.GetBool("isDead")) // 죽으면 이동멈춤
         {
-            transform.position += Vector3.right * moveSpeed * Time.deltaTime;
+            Run();
         }
 
         speedTestUI.text = moveSpeed + "";
@@ -44,17 +45,21 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Stage"))
         {
-             playerAnimator.SetBool("isGrounded", false); // 떨어질 때 달리기 애니메이션
+            playerAnimator.SetBool("isGrounded", false); // 떨어질 때 달리기 애니메이션
         }
     }
 
     void OnTriggerEnter2D(Collider2D collision) {
-        if (collision.gameObject.CompareTag("NextPoint"))
+        if (collision.gameObject.CompareTag("NextPoint")) // 다음 스테이지
         {
             Debug.Log("NextPoint");
             StageManager.Instance.ActivateStage(++StageManager.Instance.selectedStage);
             transform.position = spawnPoint;
             moveSpeed = 0;
+        }
+        else if(collision.gameObject.CompareTag("Jumper")) // 점프대
+        {
+            Jump();
         }
     }
 
@@ -63,6 +68,17 @@ public class Player : MonoBehaviour
         playerAnimator.SetBool("isDead", false);
         transform.position = spawnPoint;
         moveSpeed = 0;
+    }
+    
+    void Run()
+    {
+        playerRigidbody.AddForceX(moveSpeed, ForceMode2D.Force);
+    }
+
+    void Jump()
+    {
+        playerRigidbody.linearVelocity = new Vector2(playerRigidbody.linearVelocityX, 0); // 현재 중력 초기화
+        playerRigidbody.AddForceY(jumpForce, ForceMode2D.Impulse);
     }
 
 }

@@ -18,7 +18,7 @@ public class ScrollbarController : MonoBehaviour
     {
         scrollbarUI.onValueChanged.AddListener(OnScrollbarValueChanged);
         playerScript.moveSpeed = 1;
-        StartCoroutine(CantStopPlayer());
+        // StartCoroutine(CantStopPlayer());
     }
 
     // Update is called once per frame
@@ -31,28 +31,28 @@ public class ScrollbarController : MonoBehaviour
     {   
         if (value > preValue)
         {
-            playerScript.moveSpeed = Mathf.Min(playerScript.moveSpeed + value, 10); 
+            playerScript.moveSpeed = Mathf.Min(playerScript.moveSpeed + value, 100); 
         }
         else
         {
-            playerScript.moveSpeed = Mathf.Max(playerScript.moveSpeed - value, -0.5f);
+            playerScript.moveSpeed = Mathf.Max(playerScript.moveSpeed - value, -10);
         }
 
         preValue = value;
 
     }
 
-    private IEnumerator CantStopPlayer()
-    {
-        while(true) {
-            yield return new WaitForSeconds(1f);
-            if(playerScript.moveSpeed > -0.5f) {     
-                playerScript.moveSpeed = Mathf.Min(playerScript.moveSpeed + 1, 10);
-            } else {
-                playerScript.moveSpeed = 1;
-            }
-        }
-    }
+    // private IEnumerator CantStopPlayer()
+    // {
+    //     while(true) {
+    //         yield return new WaitForSeconds(1f);
+    //         if(playerScript.moveSpeed > -0.5f) {     
+    //             playerScript.moveSpeed = Mathf.Min(playerScript.moveSpeed + 1, 10);
+    //         } else {
+    //             playerScript.moveSpeed = 1;
+    //         }
+    //     }
+    // }
     
 
 }
