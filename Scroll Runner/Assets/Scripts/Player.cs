@@ -37,7 +37,17 @@ public class Player : MonoBehaviour
     { 
         if (collision.gameObject.CompareTag("Stage"))
         {
-            playerAnimator.SetBool("isGrounded", true); // 착지 후 달리기 애니메이션
+            Vector2 collisionNormal = collision.contacts[0].normal;
+            if(collisionNormal.y > 0.5f) // 바닥착지
+            {
+                playerAnimator.SetBool("isGrounded", true); // 착지 후 달리기 애니메이션
+            }
+            else if(collisionNormal.y < -0.5f || Mathf.Abs(collisionNormal.x) > 0.5f)  // 벽 천장 부딪힘
+            {
+                moveSpeed *= -0.1f;
+            }
+
+
         }
     }
 
@@ -78,7 +88,7 @@ public class Player : MonoBehaviour
     void Jump()
     {
         playerRigidbody.linearVelocity = new Vector2(playerRigidbody.linearVelocityX, 0); // 현재 중력 초기화
-        playerRigidbody.AddForceY(jumpForce, ForceMode2D.Impulse);
+        playerRigidbody.AddForceY(jumpForce + (0.1f * moveSpeed), ForceMode2D.Impulse);
     }
 
 }
