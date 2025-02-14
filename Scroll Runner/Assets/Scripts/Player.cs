@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
     {
         if(!playerAnimator.GetBool("isDead")) // 죽으면 이동멈춤
         {
-            Run(moveSpeed);
+            Run();
         }
 
         speedTestUI.text = moveSpeed + "";
@@ -73,7 +73,7 @@ public class Player : MonoBehaviour
         }
         if(collision.gameObject.CompareTag("Fan"))
         {
-            Run(moveSpeed*2);
+            moveSpeed *= 5;
         }
     }
 
@@ -84,7 +84,7 @@ public class Player : MonoBehaviour
         moveSpeed = 0;
     }
     
-    void Run(float moveSpeed)
+    void Run()
     {
         playerRigidbody.AddForceX(moveSpeed, ForceMode2D.Force);
     }
