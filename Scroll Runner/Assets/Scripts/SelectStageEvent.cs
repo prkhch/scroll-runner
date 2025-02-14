@@ -26,7 +26,7 @@ public class SelectStageEvent : MonoBehaviour
             for (int i = 1; i < stageButtonArray.Length; i++)
             {
                 int stageNumber = i;
-                stageButtonArray[i].onClick.AddListener(() => GameManager.Instance.LoadStageScene(stageNumber));
+                stageButtonArray[i].onClick.AddListener(() => GameManager.Instance.LoadStageScene(stageNumber)); // i번 버튼 : i번째 스테이지 로드 이벤트
             }
         }
     }

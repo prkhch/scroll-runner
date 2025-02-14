@@ -8,6 +8,7 @@ TagManager:
   - DeadZone
   - NextPoint
   - Jumper
+  - Fan
   layers:
   - Default
   - TransparentFX
