@@ -7742,9 +7742,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 220035197}
     m_Modifications:
+    - target: {fileID: -6688519197607201131, guid: 745d6c3cf75f64748b6ad4ea1b776bc4, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -6688519197607201131, guid: 745d6c3cf75f64748b6ad4ea1b776bc4, type: 3}
+      propertyPath: m_Offset.x
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7036193317245070317, guid: 745d6c3cf75f64748b6ad4ea1b776bc4, type: 3}
       propertyPath: m_Name
-      value: Fan
+      value: FanRight
       objectReference: {fileID: 0}
     - target: {fileID: 7875527071092003280, guid: 745d6c3cf75f64748b6ad4ea1b776bc4, type: 3}
       propertyPath: m_LocalPosition.x

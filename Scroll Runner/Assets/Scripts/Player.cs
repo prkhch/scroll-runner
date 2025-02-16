@@ -71,11 +71,24 @@ public class Player : MonoBehaviour
         {
             Jump();
         }
-        if(collision.gameObject.CompareTag("Fan"))
-        {
-            moveSpeed *= 5;
-        }
     }
+
+    void OnTriggerStay2D(Collider2D collision) {
+    if (collision.CompareTag("FanRight")) // 오른쪽 바람
+    {
+        float fanX = collision.transform.position.x;
+        float playerX = transform.position.x;
+        float distance = Mathf.Abs(playerX - fanX);
+        moveSpeed += 0.2f / distance; // 가까울 수록 더 빨리
+    }
+    if (collision.CompareTag("FanRight")) // 왼쪽 바람
+    {
+        float fanX = collision.transform.position.x;
+        float playerX = transform.position.x;
+        float distance = Mathf.Abs(playerX - fanX);
+        moveSpeed -= 0.2f / distance; // 가까울 수록 더 빨리
+    }
+}
 
     void OnDeathAnimationEnd()
     {
