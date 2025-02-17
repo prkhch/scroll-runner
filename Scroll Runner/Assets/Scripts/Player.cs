@@ -78,14 +78,14 @@ public class Player : MonoBehaviour
     {
         float fanX = collision.transform.position.x;
         float playerX = transform.position.x;
-        float distance = Mathf.Abs(playerX - fanX);
+        float distance = Mathf.Max(Mathf.Abs(playerX - fanX), 0.01f);
         moveSpeed += 0.2f / distance; // 가까울 수록 더 빨리
     }
-    if (collision.CompareTag("FanRight")) // 왼쪽 바람
+    if (collision.CompareTag("FanLeft")) // 왼쪽 바람
     {
         float fanX = collision.transform.position.x;
         float playerX = transform.position.x;
-        float distance = Mathf.Abs(playerX - fanX);
+        float distance = Mathf.Max(Mathf.Abs(playerX - fanX), 0.01f);
         moveSpeed -= 0.2f / distance; // 가까울 수록 더 빨리
     }
 }
