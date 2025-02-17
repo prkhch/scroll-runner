@@ -71,6 +71,10 @@ public class Player : MonoBehaviour
         {
             Jump();
         }
+        if(collision.gameObject.CompareTag("Booster")) // 부스터
+        {
+            moveSpeed += 50f;
+        }
     }
 
     void OnTriggerStay2D(Collider2D collision) {
