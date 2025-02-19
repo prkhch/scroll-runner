@@ -37,17 +37,7 @@ public class Player : MonoBehaviour
     { 
         if (collision.gameObject.CompareTag("Stage"))
         {
-            Vector2 collisionNormal = collision.contacts[0].normal;
-            if(collisionNormal.y > 0.5f) // 바닥착지
-            {
-                playerAnimator.SetBool("isGrounded", true); // 착지 후 달리기 애니메이션
-            }
-            if(collisionNormal.y < -0.5f || Mathf.Abs(collisionNormal.x) > 0.5f)  // 벽 천장 부딪힘
-            {
-                moveSpeed *= -0.1f;
-            }
-
-
+            playerAnimator.SetBool("isGrounded", true); // 착지 후 달리기 애니메이션
         }
     }
 

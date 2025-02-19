@@ -331,6 +331,7 @@ GameObject:
   - component: {fileID: 220035194}
   - component: {fileID: 220035193}
   - component: {fileID: 220035192}
+  - component: {fileID: 220035198}
   m_Layer: 0
   m_Name: Stage04
   m_TagString: Stage
@@ -4069,6 +4070,19 @@ Transform:
   - {fileID: 1380370587}
   m_Father: {fileID: 285771310}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &220035198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220035191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 330aa7eb119735b429030d14cb07d78f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerScript: {fileID: 1910857176}
 --- !u!1 &285771308
 GameObject:
   m_ObjectHideFlags: 0
@@ -14354,6 +14368,7 @@ GameObject:
   - component: {fileID: 1398310026}
   - component: {fileID: 1398310025}
   - component: {fileID: 1398310024}
+  - component: {fileID: 1398310029}
   m_Layer: 0
   m_Name: Stage05
   m_TagString: Stage
@@ -16351,6 +16366,19 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &1398310029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1398310022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 330aa7eb119735b429030d14cb07d78f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerScript: {fileID: 1910857176}
 --- !u!1 &1478946166
 GameObject:
   m_ObjectHideFlags: 0
