@@ -42,7 +42,7 @@ public class Player : MonoBehaviour
             {
                 playerAnimator.SetBool("isGrounded", true); // 착지 후 달리기 애니메이션
             }
-            else if(collisionNormal.y < -0.5f || Mathf.Abs(collisionNormal.x) > 0.5f)  // 벽 천장 부딪힘
+            if(collisionNormal.y < -0.5f || Mathf.Abs(collisionNormal.x) > 0.5f)  // 벽 천장 부딪힘
             {
                 moveSpeed *= -0.1f;
             }
@@ -83,7 +83,7 @@ public class Player : MonoBehaviour
         float fanX = collision.transform.position.x;
         float playerX = transform.position.x;
         float distance = Mathf.Max(Mathf.Abs(playerX - fanX), 0.01f);
-        moveSpeed += 0.1f / distance; // 가까울 수록 더 빨리
+        moveSpeed += 0.2f / distance; // 가까울 수록 더 빨리
     }
     if (collision.CompareTag("FanLeft")) // 왼쪽 바람
     {
