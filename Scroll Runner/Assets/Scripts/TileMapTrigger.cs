@@ -35,10 +35,14 @@ public class TileMapTrigger : MonoBehaviour
     private void PlayerPushOut(Collision2D collision) 
     {
         Vector2 collisionNormal = collision.contacts[0].normal; // 충돌한 방향
-        if(Mathf.Abs(collisionNormal.x) > 0.5f) 
+        if(Mathf.Abs(collisionNormal.x) > 0.5f && Mathf.Abs(collisionNormal.y) < 0.5f) 
         {
-            playerScript.moveSpeed *= -0.1f; // 이동 방향 반전
-            playerScript.moveSpeed -= 0.1f; // 이동 방향 반전
+            playerScript.moveSpeed *= 0.5f;
+            
+            if(playerScript.moveSpeed <= 0.01f)
+            {
+                playerScript.moveSpeed = 0;
+            }
         }
     }
 }
