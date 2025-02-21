@@ -28,6 +28,7 @@ public class Player : MonoBehaviour
         if(!playerAnimator.GetBool("isDead")) // 죽으면 이동멈춤
         {
             Run();
+            CheckRunDirection();
         }
 
         speedTestUI.text = moveSpeed + "";
@@ -89,6 +90,18 @@ public class Player : MonoBehaviour
     void Run()
     {
         playerRigidbody.AddForceX(moveSpeed, ForceMode2D.Force);
+    }
+
+    void CheckRunDirection()
+    {
+        if(moveSpeed < 0)
+        {
+            playerAnimator.SetBool("isBack", true);
+        }
+        else
+        {
+            playerAnimator.SetBool("isBack", false);
+        }
     }
 
     void Jump()

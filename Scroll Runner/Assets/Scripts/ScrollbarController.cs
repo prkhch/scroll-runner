@@ -12,12 +12,14 @@ public class ScrollbarController : MonoBehaviour
 
     [Header("설정")]
     public float preValue;
+    private float valueBalance;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         scrollbarUI.onValueChanged.AddListener(OnScrollbarValueChanged);
         playerScript.moveSpeed = 1;
+        valueBalance = 0.5f;
         // StartCoroutine(CantStopPlayer());
     }
 
@@ -31,11 +33,11 @@ public class ScrollbarController : MonoBehaviour
     {   
         if (value > preValue)
         {
-            playerScript.moveSpeed = Mathf.Min(playerScript.moveSpeed + value, 100); 
+            playerScript.moveSpeed = Mathf.Min(playerScript.moveSpeed + value * valueBalance, 100); 
         }
         else
         {
-            playerScript.moveSpeed = Mathf.Max(playerScript.moveSpeed - value, -10);
+            playerScript.moveSpeed = Mathf.Max(playerScript.moveSpeed - value * valueBalance, -100);
         }
 
         preValue = value;
