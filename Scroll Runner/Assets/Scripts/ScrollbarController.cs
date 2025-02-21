@@ -19,7 +19,7 @@ public class ScrollbarController : MonoBehaviour
     {
         scrollbarUI.onValueChanged.AddListener(OnScrollbarValueChanged);
         playerScript.moveSpeed = 1;
-        valueBalance = 0.5f;
+        valueBalance = 0.7f;
         // StartCoroutine(CantStopPlayer());
     }
 
