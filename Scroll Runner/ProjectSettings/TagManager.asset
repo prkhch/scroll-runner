@@ -11,6 +11,8 @@ TagManager:
   - FanRight
   - FanLeft
   - Booster
+  - Fan
+  - MovingGround
   layers:
   - Default
   - TransparentFX

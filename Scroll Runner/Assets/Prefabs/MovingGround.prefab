@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 5643181502383071560}
   - component: {fileID: 8381160651160653062}
   m_Layer: 0
-  m_Name: VerticalMovingGround
-  m_TagString: Untagged
+  m_Name: MovingGround
+  m_TagString: MovingGround
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e62d97df81f9b944f8ea146f47ff3779, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isVertical: 0
   speed: 0
   distance: 0
   direction: 0
@@ -138,15 +139,15 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0067956746, y: -0.0019416511}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 0.36}
+    oldSize: {x: 0.8333333, y: 0.3}
     newSize: {x: 0.5, y: 0.18}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 0.36}
+  m_Size: {x: 0.86602837, y: 0.2978682}
   m_EdgeRadius: 0
