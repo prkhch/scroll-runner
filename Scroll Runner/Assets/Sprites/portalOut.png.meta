@@ -1,22 +1,37 @@
 fileFormatVersion: 2
-guid: e1677300de7636044882c428950bfae2
+guid: aa7bc7be27795544bae513526ba5dd25
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 756520030481285786
-    second: 105479-OMJHTV-828-removebg-preview (1)_0
+      213: -5778199418508709952
+    second: 29a7cc021e8ce95b72390821c15e2069-removebg-preview (1)_0
   - first:
-      213: -8198197010640979183
-    second: 105479-OMJHTV-828-removebg-preview (1)_1
+      213: 5080133910352089310
+    second: 29a7cc021e8ce95b72390821c15e2069-removebg-preview (1)_1
   - first:
-      213: 3307718043011136293
-    second: 105479-OMJHTV-828-removebg-preview (1)_2
+      213: 2898397362494160267
+    second: 29a7cc021e8ce95b72390821c15e2069-removebg-preview (1)_2
   - first:
-      213: 8414603451533643426
-    second: 105479-OMJHTV-828-removebg-preview (1)_3
+      213: -831318024825381139
+    second: 29a7cc021e8ce95b72390821c15e2069-removebg-preview (1)_3
   - first:
-      213: -2946217464081996717
-    second: 105479-OMJHTV-828-removebg-preview (1)_4
+      213: -2567755525308309934
+    second: 29a7cc021e8ce95b72390821c15e2069-removebg-preview (1)_4
+  - first:
+      213: 9013994066683909890
+    second: 29a7cc021e8ce95b72390821c15e2069-removebg-preview (1)_5
+  - first:
+      213: -118002648083051851
+    second: 29a7cc021e8ce95b72390821c15e2069-removebg-preview (1)_6
+  - first:
+      213: 5539875900811016515
+    second: 29a7cc021e8ce95b72390821c15e2069-removebg-preview (1)_7
+  - first:
+      213: -7655205609412503117
+    second: 29a7cc021e8ce95b72390821c15e2069-removebg-preview (1)_8
+  - first:
+      213: -5507672909925515604
+    second: 29a7cc021e8ce95b72390821c15e2069-removebg-preview (1)_9
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -138,111 +153,155 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 105479-OMJHTV-828-removebg-preview (1)_0
+      name: portalOut_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 38
-        width: 14
-        height: 17
+        x: 4
+        y: 84
+        width: 21
+        height: 39
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a920e42a5f2bf7a00800000000000000
-      internalID: 756520030481285786
+      spriteID: 0cf6b6a3e36bfcfa0800000000000000
+      internalID: -5778199418508709952
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 105479-OMJHTV-828-removebg-preview (1)_1
-      rect:
-        serializedVersion: 2
-        x: 28
-        y: 39
-        width: 12
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 11b331631472a3e80800000000000000
-      internalID: -8198197010640979183
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 105479-OMJHTV-828-removebg-preview (1)_2
-      rect:
-        serializedVersion: 2
-        x: 45
-        y: 39
-        width: 15
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 52b34daf80067ed20800000000000000
-      internalID: 3307718043011136293
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 105479-OMJHTV-828-removebg-preview (1)_3
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 20
-        width: 14
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2ae4076b14da6c470800000000000000
-      internalID: 8414603451533643426
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 105479-OMJHTV-828-removebg-preview (1)_4
+      name: portalOut_1
       rect:
         serializedVersion: 2
         x: 29
-        y: 19
-        width: 12
-        height: 18
+        y: 84
+        width: 21
+        height: 39
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 354275e73deec17d0800000000000000
-      internalID: -2946217464081996717
+      spriteID: ed0d3f130e2408640800000000000000
+      internalID: 5080133910352089310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalOut_2
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 84
+        width: 21
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8db4697b0d293820800000000000000
+      internalID: 2898397362494160267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalOut_3
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 83
+        width: 21
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dee57e239a09674f0800000000000000
+      internalID: -831318024825381139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalOut_4
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 82
+        width: 21
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25e93fb44ff7d5cd0800000000000000
+      internalID: -2567755525308309934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalOut_5
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 35
+        width: 21
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2075c2078d3281d70800000000000000
+      internalID: 9013994066683909890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalOut_6
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 35
+        width: 21
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 349769fb7c791ec40800000000000000
+      internalID: 5539875900811016515
       vertices: []
       indices: 
       edges: []
@@ -251,7 +310,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 86f25a0fbb93bac44abd0c5ab03c8a2a
     internalID: 0
     vertices: []
     indices: 
@@ -261,11 +320,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      105479-OMJHTV-828-removebg-preview (1)_0: 756520030481285786
-      105479-OMJHTV-828-removebg-preview (1)_1: -8198197010640979183
-      105479-OMJHTV-828-removebg-preview (1)_2: 3307718043011136293
-      105479-OMJHTV-828-removebg-preview (1)_3: 8414603451533643426
-      105479-OMJHTV-828-removebg-preview (1)_4: -2946217464081996717
+      0: -5778199418508709952
+      portalOut_0: -5778199418508709952
+      portalOut_1: 5080133910352089310
+      portalOut_2: 2898397362494160267
+      portalOut_3: -831318024825381139
+      portalOut_4: -2567755525308309934
+      portalOut_5: 9013994066683909890
+      portalOut_6: 5539875900811016515
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

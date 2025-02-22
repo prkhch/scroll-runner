@@ -1,22 +1,34 @@
 fileFormatVersion: 2
-guid: e1677300de7636044882c428950bfae2
+guid: 18b126115bf7747419d588a13f20aadd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 756520030481285786
-    second: 105479-OMJHTV-828-removebg-preview (1)_0
+      213: -4728487136293082025
+    second: New Piskel (19)_0
   - first:
-      213: -8198197010640979183
-    second: 105479-OMJHTV-828-removebg-preview (1)_1
+      213: -8804448809855076577
+    second: New Piskel (19)_1
   - first:
-      213: 3307718043011136293
-    second: 105479-OMJHTV-828-removebg-preview (1)_2
+      213: 6274585177974186774
+    second: New Piskel (19)_2
   - first:
-      213: 8414603451533643426
-    second: 105479-OMJHTV-828-removebg-preview (1)_3
+      213: 7689617663167516359
+    second: New Piskel (19)_3
   - first:
-      213: -2946217464081996717
-    second: 105479-OMJHTV-828-removebg-preview (1)_4
+      213: 8818688171180718953
+    second: New Piskel (19)_4
+  - first:
+      213: -4340931853232438764
+    second: New Piskel (19)_5
+  - first:
+      213: 7133894423904659394
+    second: New Piskel (19)_6
+  - first:
+      213: -7429026785002654669
+    second: New Piskel (19)_7
+  - first:
+      213: -2342202858432465256
+    second: New Piskel (19)_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -63,7 +75,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 60
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -138,111 +150,199 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 105479-OMJHTV-828-removebg-preview (1)_0
+      name: portalIn_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 38
-        width: 14
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a920e42a5f2bf7a00800000000000000
-      internalID: 756520030481285786
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 105479-OMJHTV-828-removebg-preview (1)_1
-      rect:
-        serializedVersion: 2
-        x: 28
-        y: 39
-        width: 12
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 11b331631472a3e80800000000000000
-      internalID: -8198197010640979183
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 105479-OMJHTV-828-removebg-preview (1)_2
-      rect:
-        serializedVersion: 2
-        x: 45
-        y: 39
-        width: 15
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 52b34daf80067ed20800000000000000
-      internalID: 3307718043011136293
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 105479-OMJHTV-828-removebg-preview (1)_3
-      rect:
-        serializedVersion: 2
-        x: 7
+        x: 14
         y: 20
-        width: 14
-        height: 14
+        width: 33
+        height: 62
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2ae4076b14da6c470800000000000000
-      internalID: 8414603451533643426
+      spriteID: 75c2f3c800a016eb0800000000000000
+      internalID: -4728487136293082025
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: 105479-OMJHTV-828-removebg-preview (1)_4
+      name: portalIn_1
       rect:
         serializedVersion: 2
-        x: 29
+        x: 77
         y: 19
-        width: 12
-        height: 18
+        width: 33
+        height: 62
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 354275e73deec17d0800000000000000
-      internalID: -2946217464081996717
+      spriteID: f173a75947050d580800000000000000
+      internalID: -8804448809855076577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalIn_2
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 20
+        width: 33
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6132516a9fdc31750800000000000000
+      internalID: 6274585177974186774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalIn_3
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 19
+        width: 33
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ce4ba7f58207ba60800000000000000
+      internalID: 7689617663167516359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalIn_4
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 22
+        width: 33
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96b7a241b26426a70800000000000000
+      internalID: 8818688171180718953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalIn_5
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 21
+        width: 33
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41207ed8a79e1c3c0800000000000000
+      internalID: -4340931853232438764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalIn_6
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 21
+        width: 33
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c72af97e2fa00360800000000000000
+      internalID: 7133894423904659394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalIn_7
+      rect:
+        serializedVersion: 2
+        x: 461
+        y: 23
+        width: 33
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 334fd0def7bc6e890800000000000000
+      internalID: -7429026785002654669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: portalIn_8
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 23
+        width: 33
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8967a37e8e2de7fd0800000000000000
+      internalID: -2342202858432465256
       vertices: []
       indices: 
       edges: []
@@ -251,7 +351,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 76541dfbb89f1b244aad4c0e9d1d30bd
     internalID: 0
     vertices: []
     indices: 
@@ -261,11 +361,15 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      105479-OMJHTV-828-removebg-preview (1)_0: 756520030481285786
-      105479-OMJHTV-828-removebg-preview (1)_1: -8198197010640979183
-      105479-OMJHTV-828-removebg-preview (1)_2: 3307718043011136293
-      105479-OMJHTV-828-removebg-preview (1)_3: 8414603451533643426
-      105479-OMJHTV-828-removebg-preview (1)_4: -2946217464081996717
+      portalIn_0: -4728487136293082025
+      portalIn_1: -8804448809855076577
+      portalIn_2: 6274585177974186774
+      portalIn_3: 7689617663167516359
+      portalIn_4: 8818688171180718953
+      portalIn_5: -4340931853232438764
+      portalIn_6: 7133894423904659394
+      portalIn_7: -7429026785002654669
+      portalIn_8: -2342202858432465256
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
