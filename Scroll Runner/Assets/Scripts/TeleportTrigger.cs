@@ -5,7 +5,15 @@ public class TeleportTrigger : MonoBehaviour
     [Header("래퍼런스")]
     public Animator portalOutAnimator;
     public Transform outPoint;
-    public Transform player;
+    private Transform playerTransform;
+    void Awake()
+    {
+        GameObject playerObj = GameObject.FindWithTag("Player");
+        if(playerObj != null) 
+        {
+            playerTransform = playerObj.transform;
+        }
+    }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,7 +31,7 @@ public class TeleportTrigger : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Player"))
         {
-            player.position = outPoint.position;
+            playerTransform.position = outPoint.position;
             portalOutAnimator.SetTrigger("ActivePortal");
         }
     }

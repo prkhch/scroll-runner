@@ -6,13 +6,14 @@ TagManager:
   tags:
   - Stage
   - DeadZone
-  - NextPoint
+  - NextPointDoor
   - Jumper
+  - Booster
   - FanRight
   - FanLeft
-  - Booster
-  - Fan
   - MovingGround
+  - NextPointDoorLock
+  - NextPointKey
   layers:
   - Default
   - TransparentFX

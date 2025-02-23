@@ -22,7 +22,14 @@ public class StageManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        selectedStage = GameManager.Instance.selectedStage;
+        if(GameManager.Instance == null)
+        {
+            selectedStage = 1;
+        }
+        else
+        {
+            selectedStage = GameManager.Instance.selectedStage;
+        }
         ActivateStage(selectedStage);
     }
 

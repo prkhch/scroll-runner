@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class JumperTrigger : MonoBehaviour
 {
-    bool hasLifted = false;
     [Header("래퍼런스")]
     public Animator jumperAnimator;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -21,12 +20,6 @@ public class JumperTrigger : MonoBehaviour
         if(collision.gameObject.CompareTag("Player"))
         {
             jumperAnimator.SetTrigger("LiftUp");
-            Debug.Log("Jump");
         }
-    }
-
-    void OnLiftUpAnimationEnd()
-    {
-        // hasLifted = false;
     }
 }

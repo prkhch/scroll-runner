@@ -3,8 +3,16 @@ using UnityEngine;
 
 public class DeadZoneTrigger : MonoBehaviour
 {
-    [Header("레퍼런스")]
-    public Animator playerAnimator;
+    private Animator playerAnimator;
+    void Awake()
+    {
+        GameObject playerObj = GameObject.FindWithTag("Player");
+        if (playerObj != null)
+        {
+            playerAnimator = playerObj.GetComponent<Animator>();
+        }
+    }
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

@@ -3,7 +3,15 @@ using UnityEngine;
 public class TileMapTrigger : MonoBehaviour
 {
     [Header("래퍼런스")]
-    public Player playerScript;
+    private Player playerScript;
+    void Awake()
+    {
+        GameObject playerObj = GameObject.FindWithTag("Player");
+        if(playerObj != null)
+        {
+            playerScript = playerObj.GetComponent<Player>();
+        }
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

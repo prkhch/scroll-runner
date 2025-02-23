@@ -14,12 +14,15 @@ public class Player : MonoBehaviour
     public Vector2 spawnPoint;
 
     public TMP_Text speedTestUI;
+    private bool hasKey;
+    private GameObject key;
     
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         transform.position = spawnPoint;
+        hasKey = false;
     }
 
     // Update is called once per frame
@@ -53,10 +56,20 @@ public class Player : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision) {
         if (collision.gameObject.CompareTag("NextPoint")) // 다음 스테이지
         {
-            Debug.Log("NextPoint");
-            StageManager.Instance.ActivateStage(++StageManager.Instance.selectedStage);
-            transform.position = spawnPoint;
-            moveSpeed = 0;
+            GoToNextStage();
+        }
+        if(collision.gameObject.CompareTag("NextPointDoorLock"))
+        {
+            if(hasKey)
+            {
+                GoToNextStage();
+            }
+        }
+        if(collision.gameObject.CompareTag("NextPointKey"))
+        {
+            hasKey = true;
+            key = collision.gameObject;
+            collision.gameObject.SetActive(false);
         }
         if(collision.gameObject.CompareTag("Jumper")) // 점프대
         {
@@ -80,11 +93,15 @@ public class Player : MonoBehaviour
     }
 }
 
-    void OnDeathAnimationEnd()
+    void OnDeathAnimationEnd() // 부활
     {
         playerAnimator.SetBool("isDead", false);
         transform.position = spawnPoint;
         moveSpeed = 0;
+        hasKey = false;
+        if(key != null) {
+            key.SetActive(true);
+        }
     }
     
     void Run()
@@ -108,6 +125,14 @@ public class Player : MonoBehaviour
     {
         playerRigidbody.linearVelocity = new Vector2(playerRigidbody.linearVelocityX, 0); // 현재 중력 초기화
         playerRigidbody.AddForceY(jumpForce + (0.1f * moveSpeed), ForceMode2D.Impulse);
+    }
+
+    void GoToNextStage()
+    {
+        StageManager.Instance.ActivateStage(++StageManager.Instance.selectedStage);
+        transform.position = spawnPoint;
+        moveSpeed = 0;
+        hasKey = false;
     }
 
 }
