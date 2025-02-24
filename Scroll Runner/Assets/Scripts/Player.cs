@@ -77,7 +77,14 @@ public class Player : MonoBehaviour
         }
         if(collision.gameObject.CompareTag("Booster")) // 부스터
         {
-            moveSpeed += 50f;
+            if(moveSpeed < 0)
+            {
+                moveSpeed -= 50f;
+            }
+            else
+            {
+                moveSpeed += 50f;
+            }
         }
     }
 
