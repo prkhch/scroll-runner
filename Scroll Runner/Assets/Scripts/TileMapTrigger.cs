@@ -28,6 +28,7 @@ public class TileMapTrigger : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player")) // 플레이어 충돌 감지
         {
+            Debug.Log("OnCollisionEnter2D");
             PlayerPushOut(collision);
         }
     }
@@ -36,6 +37,7 @@ public class TileMapTrigger : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player")) // 플레이어 충돌 감지
         {
+            Debug.Log("OnCollisionStay2D");
             PlayerPushOut(collision);
         }
     }
@@ -45,11 +47,13 @@ public class TileMapTrigger : MonoBehaviour
         Vector2 collisionNormal = collision.contacts[0].normal; // 충돌한 방향
         if(Mathf.Abs(collisionNormal.x) > 0.5f && Mathf.Abs(collisionNormal.y) < 0.5f) 
         {
-            playerScript.moveSpeed *= 0.5f;
-            
-            if(playerScript.moveSpeed <= 0.01f)
+            if (collisionNormal.x > 0.5f) // 오른쪽 벽
             {
-                playerScript.moveSpeed = 0;
+                playerScript.moveSpeed = -0.5f;
+            }
+            else if (collisionNormal.x < -0.5f) // 왼쪽 벽
+            {
+                playerScript.moveSpeed = 0.5f;
             }
         }
     }
