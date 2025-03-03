@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Project
   m_RootView: {fileID: 3}
   m_MinSize: {x: 875, y: 332}
   m_MaxSize: {x: 10000, y: 10000}
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 18
+  controlID: 51
   draggingID: 0
 --- !u!114 &7
 MonoBehaviour:
@@ -170,7 +170,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 19
+  controlID: 52
   draggingID: 0
 --- !u!114 &8
 MonoBehaviour:
@@ -197,7 +197,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 50}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 20
+  controlID: 53
   draggingID: 0
 --- !u!114 &9
 MonoBehaviour:
@@ -446,7 +446,7 @@ MonoBehaviour:
     m_ControlHash: 1412526313
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 216
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
@@ -493,7 +493,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: b4f6ffff66f7ffff08fbffffd6b70000e6b7000042bd0000b0bd0000d0bd0000
+      m_ExpandedIDs: 62acffffc2b2fffff8b5ffffdcc2ffff22c4ffff8acaffffc2daffffaadcffff20ddffffbee4ffff8af8ffff4af9ffffb2f9ffff08fbffffb8b70000c8b700003cb8000092cb0000a2cb0000a8cb000016cc0000ecd0000054d5000064d50000b4e10000bae1000028e20000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1111,9 +1111,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 2.0168433, y: -0.03368616, z: 89}
+    m_Target: {x: 10.069129, y: 3.8285186, z: 0.014128728}
     speed: 2
-    m_Value: {x: 2.0168433, y: -0.03368616, z: 89}
+    m_Value: {x: 10.069129, y: 3.8285186, z: 0.014128728}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1163,9 +1163,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 9.23498
+    m_Target: 8.587124
     speed: 2
-    m_Value: 9.23498
+    m_Value: 8.587124
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1344,7 +1344,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Tiles/Transparent
+    - Assets/Scripts
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1354,15 +1354,15 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 46
   m_LastFolders:
-  - Assets/Tiles/Transparent
+  - Assets/Scripts
   m_LastFoldersGridSize: 46
   m_LastProjectPath: C:\scroll-runner\Scroll Runner
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 59}
-    m_SelectedIDs: a6c80000
-    m_LastClickedID: 51366
+    m_SelectedIDs: 2cbe0000
+    m_LastClickedID: 48684
     m_ExpandedIDs: 00000000bcbd0000bebd0000c0bd0000c2bd0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1446,7 +1446,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 824}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 46
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 158
