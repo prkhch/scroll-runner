@@ -28,7 +28,6 @@ public class TileMapTrigger : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player")) // 플레이어 충돌 감지
         {
-            Debug.Log("OnCollisionEnter2D");
             PlayerPushOut(collision);
         }
     }
@@ -37,7 +36,6 @@ public class TileMapTrigger : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player")) // 플레이어 충돌 감지
         {
-            Debug.Log("OnCollisionStay2D");
             PlayerPushOut(collision);
         }
     }
