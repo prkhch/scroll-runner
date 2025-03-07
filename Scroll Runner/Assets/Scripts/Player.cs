@@ -79,11 +79,11 @@ public class Player : MonoBehaviour
         {
             if(moveSpeed < 0)
             {
-                moveSpeed -= 50f;
+                moveSpeed -= 40f;
             }
             else
             {
-                moveSpeed += 50f;
+                moveSpeed += 40f;
             }
         }
     }
