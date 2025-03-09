@@ -79,12 +79,16 @@ public class Player : MonoBehaviour
         {
             if(moveSpeed < 0)
             {
-                moveSpeed -= 40f;
+                moveSpeed -= 50f;
             }
             else
             {
-                moveSpeed += 40f;
+                moveSpeed += 50f;
             }
+        }
+        if(collision.gameObject.CompareTag("MovingGround"))
+        {
+            moveSpeed = 0f;
         }
     }
 
