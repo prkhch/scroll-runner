@@ -29,6 +29,14 @@ public class SelectStageEvent : MonoBehaviour
                 stageButtonArray[i].onClick.AddListener(() => GameManager.Instance.LoadStageScene(stageNumber)); // i번 버튼 : i번째 스테이지 로드 이벤트
             }
         }
+
+        int maxStage = PlayerPrefs.GetInt("MaxStage", 1);
+        for(int i=1; i<stageButtonArray.Length; i++)
+        {
+            if(i <= maxStage) {
+                stageButtonArray[i].gameObject.SetActive(true);
+            }
+        }
     }
 
     // Update is called once per frame

@@ -141,7 +141,14 @@ public class Player : MonoBehaviour
     void GoToNextStage()
     {
         transform.SetParent(null);
-        StageManager.Instance.ActivateStage(++StageManager.Instance.selectedStage);
+        int maxStage = PlayerPrefs.GetInt("MaxStage", 1);
+        int nextStage = StageManager.Instance.selectedStage + 1;
+        if(maxStage < nextStage)
+        {
+            PlayerPrefs.SetInt("MaxStage", nextStage);
+        }
+        StageManager.Instance.ActivateStage(nextStage);
+        StageManager.Instance.selectedStage++;
         transform.position = spawnPoint;
         moveSpeed = 0;
         hasKey = false;
