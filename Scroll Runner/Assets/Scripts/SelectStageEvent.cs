@@ -33,8 +33,13 @@ public class SelectStageEvent : MonoBehaviour
         int maxStage = PlayerPrefs.GetInt("MaxStage", 1);
         for(int i=1; i<stageButtonArray.Length; i++)
         {
-            if(i <= maxStage) {
+            if(i <= maxStage) 
+            {
                 stageButtonArray[i].gameObject.SetActive(true);
+            }
+            else 
+            {
+                stageButtonArray[i].gameObject.SetActive(false);
             }
         }
     }

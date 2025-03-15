@@ -29,7 +29,8 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        PlayerPrefs.DeleteAll();  // 모든 PlayerPrefs 초기화
+        PlayerPrefs.Save();       // 즉시 저장
     }
 
     // Update is called once per frame
