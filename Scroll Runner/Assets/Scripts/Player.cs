@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         if(!playerAnimator.GetBool("isDead")) // 죽으면 이동멈춤
         {
@@ -79,11 +79,11 @@ public class Player : MonoBehaviour
         {
             if(moveSpeed < 0)
             {
-                moveSpeed -= 50f;
+                moveSpeed -= 10f;
             }
             else
             {
-                moveSpeed += 50f;
+                moveSpeed += 10f;
             }
         }
         if(collision.gameObject.CompareTag("MovingGround"))
@@ -100,11 +100,11 @@ public class Player : MonoBehaviour
         float distance = Mathf.Max(Mathf.Abs(playerX - fanX), 0.1f);
 
         float windEffect = collision.CompareTag("FanRight") ? 0.2f : -0.2f;
-        moveSpeed += windEffect / (distance * 0.5f) ; // 가까울수록 영향 증가
+        moveSpeed += windEffect / (distance * 2f) ; // 가까울수록 영향 증가
     }
 }
 
-    void OnDeathAnimationEnd() // 부활
+    public void OnDeathAnimationEnd() // 부활
     {
         playerAnimator.SetBool("isDead", false);
         transform.position = spawnPoint;
@@ -117,7 +117,7 @@ public class Player : MonoBehaviour
     
     void Run()
     {
-        playerRigidbody.AddForceX(moveSpeed, ForceMode2D.Force);
+        playerRigidbody.AddForceX(moveSpeed, ForceMode2D.Impulse);
     }
 
     void CheckRunDirection()
@@ -135,11 +135,12 @@ public class Player : MonoBehaviour
     void Jump()
     {
         playerRigidbody.linearVelocity = new Vector2(playerRigidbody.linearVelocityX, 0); // 현재 중력 초기화
-        playerRigidbody.AddForceY(jumpForce + (0.1f * moveSpeed), ForceMode2D.Impulse);
+        playerRigidbody.AddForceY(jumpForce + (0.3f * moveSpeed), ForceMode2D.Impulse);
     }
 
     void GoToNextStage()
     {
+        transform.SetParent(null);
         StageManager.Instance.ActivateStage(++StageManager.Instance.selectedStage);
         transform.position = spawnPoint;
         moveSpeed = 0;

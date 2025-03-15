@@ -19,7 +19,7 @@ public class ScrollbarController : MonoBehaviour
     {
         scrollbarUI.onValueChanged.AddListener(OnScrollbarValueChanged);
         playerScript.moveSpeed = 1;
-        valueBalance = 0.7f;
+        valueBalance = 0.1f;
         // StartCoroutine(CantStopPlayer());
     }
 
@@ -33,11 +33,11 @@ public class ScrollbarController : MonoBehaviour
     {   
         if (value > preValue)
         {
-            playerScript.moveSpeed = Mathf.Min(playerScript.moveSpeed + value * valueBalance, 100); 
+            playerScript.moveSpeed = Mathf.Min(playerScript.moveSpeed + value * valueBalance, 20); 
         }
         else
         {
-            playerScript.moveSpeed = Mathf.Max(playerScript.moveSpeed - value * valueBalance, -100);
+            playerScript.moveSpeed = Mathf.Max(playerScript.moveSpeed - value * valueBalance, -20);
         }
 
         preValue = value;
